@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="_style/style.scss">
+    <link rel="icon" type="image/png" href="images/pu.png">
+    <title>Karan Singh</title>
+    <script src="_js/scramble.js"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async
+     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  </head>
+  <body>
+  <table cellspacing="0" cellpadding="0" border="0" width="800" align="center">
+    <tbody><tr>
+    <td>
+      <table cellspacing="0" cellpadding="20" border="0" width="75%" align="center">
+      <tbody><tr bgcolor="#ffffd0">
+        <td width="100%" valign="middle">
+        <p align="center">
+          <name>Karan Singh</name><br/>
+          <b>email</b>:
+          <font id="covermail"><font id="email" style="display:inline;">
+            <noscript><i>Please enable Javascript to view.</i></noscript>
+          </font></font>
+          <script>
+          emailScramble = new scrambledString(document.getElementById('email'),
+              'emailScramble', 'ranasduke@pincer.not',
+              [3,4,5,2,6,20,21,1,19,7,8,10,11,12,13,9,17,16,15,14]);
+          function unscram(){
+              emailScramble.initAnimatedBubbleSort();
+              var elem = document.getElementById('covermail');
+              elem.style.backgroundColor = 'yellow';
+          }
+          </script>
+        </p>
+        <p>
+          I'm a second year <a href="http://cs.princeton.edu">Computer Science</a> PhD student at <a href="http://www.princeton.edu">Princeton University</a>, advised by <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>. My research is focussed on <b>interactive machine learning</b>, and seeks to advance the theoretical understanding of reinforcement learning. I'm also invested in issues concerning privacy and fairness in machine learning.
+        </p>
+        <p>
+          I did my bachelors at <a href="http://iitk.ac.in">IIT Kanpur</a>, where I worked on sketch-based algorithms for machine learning, and space lower bounds in the streaming model. I've also spent time at <a href="http://research.microsoft.com/en-us/">Microsoft Research</a> in Redmond working on program synthesis.
+          </p>
+        <p align="center">
+          <a onclick="unscram();">Email</a> &nbsp;|&nbsp;
+          <a href="https://i-am-karan-singh.github.io/docs/KaranSingh-CV.pdf">CV</a> &nbsp;|&nbsp;
+          <a href="https://scholar.google.com/citations?user=PZJIgZUAAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp; 
+          <a href="https://github.com/i-am-karan-singh/">Github</a>
+        </p>
+        </td>
+        <td width="0%">
+        <!--<img src="index_files/karan_circle.jpg">-->
+        </td>
+      </tr>
+      </tbody></table>
+      <table cellspacing="0" cellpadding="20" border="0" width="100%" align="center">
+      <tbody><tr>
+        <td width="100%" valign="middle">
+          <heading>Publications</heading>
+        </td>
+      </tr>
+      </tbody></table>
+  
+  <table cellspacing="0" cellpadding="20" border="0" width="100%" align="center">
+
+    <tbody><tr>
+      <td width="25%" valign="middle">
+        <img width=220 height=150 src="images/dp-price.png">
+      </td>
+      <td width="75%" valign="top">
+        <p><a href="http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf">
+        <papertitle>The Price of Differential Privacy for Online Learning</papertitle></a><br>
+          with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a><br/>
+        <em>International Conference on Machine Learning (ICML)</em>, 2017 <br> 
+        <a href="http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf">pdf</a>
+        |
+        <a href="docs/dp-price/cite.bib">bibtex</a>
+        |
+        <a href="https://arxiv.org/abs/1701.07953">arXiv</a>
+        |
+        <a href="docs/dp-price/dpol-slides.pdf">slides</a>
+        |
+        <a href="docs/dp-price/dpol-poster.pdf">poster</a>
+        </p><p></p>
+        <p>We design differentially private algorithms for the problem of online linear optimization in the full information and bandit settings with optimal $O(\sqrt{T})$
+regret bounds. In the full-information setting, our results demonstrate that $\epsilon$-differential privacy may be ensured for free. In particular, the regret bounds scale as $O\left(\sqrt{T}+\frac{1}{\epsilon}\right)$. For bandit linear optimization, and as a special case, for non-stochastic multi-armed bandits, the proposed algorithm achieves a regret of $O\left(\frac{1}{\epsilon}\sqrt{T}\right)$ while the previously best known regret bound was $O\left(\frac{1}{\epsilon}T^{\frac{2}{3}}\right)$.</p>
+      </td>
+    </tr>
+	
+    <tr>
+      <td width="25%">
+        <img width=220 src="images/onco-regret.png">
+      </td>
+      <td width="75%" valign="top">
+        <p><a href="http://proceedings.mlr.press/v70/hazan17a/hazan17a.pdf">
+        <papertitle>Efficient Regret Minimization in Non-Convex Games</papertitle></a><br>
+          with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a> <br>
+          <em>International Conference on Machine Learning (ICML)</em>, 2017 <br>        
+          <a href="http://proceedings.mlr.press/v70/hazan17a/hazan17a.pdf">pdf</a>
+        |
+        <a href="docs/onco-regret/cite.bib">bibtex</a>
+        |
+        <a href="https://arxiv.org/abs/1708.00075">arXiv</a>
+        |
+        <a href="docs/onco-regret/onco_poster.pdf">poster</a>
+        </p><p></p>
+        <p>We consider regret minimization in repeated games with non-convex loss functions. Minimizing the standard notion of regret is computationally intractable. Thus, we define a natural notion of regret which permits efficient optimization and generalizes offline guarantees for convergence to an approximate local optimum. We give gradient-based methods that achieve optimal regret, which in turn guarantee convergence to equilibrium in this framework.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td width="25%">
+          <img width=220 src="images/lds.png">
+      </td>
+      <td width="75%" valign="top">
+        <p><a href="#">
+          <papertitle>Manuscripts</papertitle></a><br>
+          <papertitle>Online Learning of Linear Dynamical Systems</papertitle></a><br>
+          with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a> <br>
+          <em>Available soon</em>.<br>
+          <papertitle>Dynamic Task Allocation for Crowdsourcing</papertitle></a><br>
+          with <a href="http://www.pacm.princeton.edu/node/368">Irineo Cabreros</a>, <a href="http://www.orie.cornell.edu/people/students_phd.cfm?grad=2362&year=2017">Angela Zhou</a> <br>
+          Prelim at <em>ICML Workshop on Data Efficient Machine Learning</em>, 2016<br>
+        </td>
+      </tr>
+     </tbody></table>
+      <table cellspacing="0" cellpadding="20" border="0" width="100%" align="center">
+      <tbody><tr>
+        <td>
+        <heading>Teaching</heading> (Assistantships in Instruction)
+        </td>
+      </tr>
+      </tbody></table>
+      <table cellpadding="20" border="0" width="100%" align="center">
+      <tbody><tr>
+        <td width="25%"><img src="images/teach.png" width="220" height="160"></td>
+        <td width="75%" valign="center">
+        <p>
+          <a href="http://www.cs.princeton.edu/courses/archive/fall16/cos402/">
+          <papertitle>COS 402: Machine Learning and Artificial Intelligence</papertitle>
+          </a><br>
+          <em>Princeton University</em>, Fall 2016<br>
+          <strong>Instructors</strong>: Prof. <a href="http://cs.princeton.edu/~arora/">Sanjeev Arora</a>, Prof. <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a><br>
+        </p>
+        <p>
+          <a href="http://www.cs.princeton.edu/courses/archive/fall17/cos324/">
+          <papertitle>COS 324: Introduction to Machine Learning</papertitle>
+          </a><br>
+          <em>Princeton University</em>, Fall 2017<br>
+          <strong>Instructors</strong>: Prof. <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, Prof. <a href="http://cs.princeton.edu/~ysinger">Yoram Singer</a>
+          <br>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+      <table cellspacing="0" cellpadding="20" border="0" width="100%" align="center">
+      <tbody><tr>
+        <td>
+        <br>
+        <p align="right">
+          <font size="1">
+          A minimal adaptation of
+          <a href="https://people.eecs.berkeley.edu/~pathak/">this</a>, hence
+          <a href="https://jonbarron.info/">this</a>
+          and
+          <a href="http://jeffdonahue.com/">this</a>.
+	    </font>
+        </p>
+        </td>
+      </tr>
+      </tbody></table>
+    </td>
+    </tr>
+  </tbody></table>
+  
+
+</body></html>
