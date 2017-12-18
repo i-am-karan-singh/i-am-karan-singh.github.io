@@ -20,7 +20,7 @@ font-size: 26px;
 }
 papertitle {
 font-family: 'Lato', Verdana, Helvetica, sans-serif;
-font-size: 20px;
+font-size: 18px;
 }
 name {
 font-family: 'Lato', Verdana, Helvetica, sans-serif;
@@ -61,4 +61,3 @@ border-radius: 4px !important;
 .en-markup-crop-options div div:first-of-type {
 margin-left: 0px !important;
 }
-
