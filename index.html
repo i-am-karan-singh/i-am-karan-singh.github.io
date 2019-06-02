@@ -54,7 +54,7 @@
         </p>
         <p align="center">
           <a onclick="unscram();">Email</a> &nbsp;|&nbsp;
-          <a href="https://i-am-karan-singh.github.io/docs/cv/KaranSingh-CV-full.pdf">CV</a> &nbsp;|&nbsp;
+          <a href="https://i-am-karan-singh.github.io/docs/cv/KaranSingh-CV.pdf">CV</a> &nbsp;|&nbsp;
           <a href="https://scholar.google.com/citations?user=PZJIgZUAAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp; 
           <a href="https://github.com/i-am-karan-singh/">Github</a>
         </p>
@@ -69,7 +69,10 @@
       <tr><td>
         <heading>News</heading>
         <ul>
-          <li> <i>[December 2018]</i> Posted a new <a href="https://arxiv.org/abs/1812.02690">preprint</a> on <a href="#max-ent">maximum entropy exploration</a> &mdash; a provably efficient algorithm for exploring MDPs in the absence of a reward function.</li>
+            <li> <i>[May 2019]</i> <a href="#h-inf">Three</a> <a href="#max-ent">papers</a> <a href="#ggt">accected</a> at <a href="https://icml.cc/">ICML 2019</a>. </li>
+            <li>
+                <i>[December2018]</i> Our research on <a href="https://arxiv.org/abs/1806.02958">full-matrix adaptive preconditioning</a> was featured on the <a href="https://ai.googleblog.com/2018/12/google-ai-princeton-current-and-future.html">Google AI Blog</a>.
+            </li>
 	        <li> <i>[September 2018]</i> Paper on <a href="#lds-asym">learning asymmetric LDS</a> accepted at <a href="https://nips.cc/Conferences/2018">NIPS 2018</a> (<strong>Oral Presentation</strong>).</li>
         </ul>
       </td></tr>
@@ -83,94 +86,109 @@
       </tbody></table>
   
   <table cellspacing="0" cellpadding="7" border="0" width="100%" align="center">
-    <tbody>
-      <tr bgcolor="#ffffd0">
-          <td width="25%" valign="middle">
-            <img width=220 src="images/max-ent.gif">
+      <tbody>
+          <tr bgcolor="#ffffd0">
+              <td width="25%" valign="middle">
+                  <img width=200 src="images/h-inf.gif">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="http://proceedings.mlr.press/v97/agarwal19c/agarwal19c.pdf" name="h-inf">
+                      <papertitle><img src="images/new.png" height="15">Online Control with Adversarial Disturbances</papertitle></a><br>
+                      with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a>, <a href="https://www.cs.princeton.edu/~bbullins/">Brian Bullins</a>, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a><br>
+                      <em>International Conference on Machine Learning (ICML)</em>, 2019 <br> 
+                      <a href="http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf">pdf</a> | <a href="docs/h-inf/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1902.08721">arXiv</a>
+                  </p><p></p>
+                  <p>We study the control of linear dynamical systems with adversarial disturbances, as opposed to statistical noise. We present an efficient algorithm that achieves nearly-tight regret bounds in this setting. Our result generalizes upon previous work in two main aspects: the algorithm can accommodate adversarial noise in the dynamics, and can handle general convex costs.</p>
+              </td>
+          </tr>
+          <tr bgcolor="#ffffd0">
+              <td width="25%" valign="middle">
+                  <img width=220 src="images/max-ent.gif">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf" name="max-ent">
+                      <papertitle><img src="images/new.png" height="15">Provably Efficient Maximum Entropy Exploration</papertitle></a><br>
+                      with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a>, <a href="http://www.abbyvansoest.com/">Abby Van Soest</a> <br>
+                      <em>International Conference on Machine Learning (ICML)</em>, 2019 <br> 
+                      <a href="http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf">pdf</a> | <a href="docs/max-ent/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1812.02690">arXiv</a>
+                  </p><p></p>
+                  <p>Suppose an agent is in a (possibly unknown) Markov Decision Process in the absence of a reward signal, what might we hope that an agent can efficiently learn to do? This work studies a broad class of objectives that are defined solely as functions of the state-visitation frequencies that are induced by how the agent behaves. For example, one natural, intrinsically defined, objective problem is for the agent to learn a policy which induces a distribution over state space that is as uniform as possible. We provide an efficient algorithm to optimize such such intrinsically defined objectives, when given access to a black box planning oracle.</p>
+              </td>
+          </tr>
+          <tr bgcolor="#ffffd0">
+              <td width="25%" valign="middle">
+                  <img width=220 height=170 src="images/ggt.PNG">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="http://proceedings.mlr.press/v97/agarwal19b/agarwal19b.pdf" name="ggt">
+                      <papertitle>Efficient Full-Matrix Adaptive Regularization</papertitle></a><br>
+                      with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a>, <a href="https://www.cs.princeton.edu/~bbullins/">Brian Bullins</a>, <a href="https://xinyi.github.io/" >Xinyi Chen</a>, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a>, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a> <br>
+                      <em>International Conference on Machine Learning (ICML)</em>, 2019 <br> 
+                      <a href="http://proceedings.mlr.press/v97/agarwal19b/agarwal19b.pdf">pdf</a>
+                      |
+                      <a href="docs/ggt/cite.bib">bibtex</a>
+                      |
+                      <a href="https://arxiv.org/abs/1806.02958">arXiv</a>
+                  </p><p></p>
+                  <p>Adaptive regularization methods come in diagonal and full-matrix variants. However, only the former have enjoyed widespread adoption in training large-scale deep models. In this paper, we show how to make full-matrix adaptive regularization practical and useful. At the heart of our algorithm is an efficient method for computing the inverse square root of a low-rank matrix. We show that GGT converges to first-order local minima, providing the first rigorous theoretical analysis of adaptive regularization in non-convex optimization.</p>
+              </td>
+          </tr>
+          <tr>
+              <td width="25%" valign="middle">
+                  <img width=220 src="images/lds-new.png">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="#" name="lds-news">
+                      <papertitle>Spectral Filtering for General Linear Dynamical Systems</papertitle></a><br>
+                      with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://holdenlee.github.io/">Holden Lee</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a>, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a>  <br>
+                      <em>Neural Information Processing Systems (NIPS)</em>, 2018 <strong>Oral Presentation</strong><br> 
+                      <a href="https://papers.nips.cc/paper/7714-spectral-filtering-for-general-linear-dynamical-systems.pdf">pdf</a> | <a href="docs/lds-new/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1802.03981">arXiv</a>
+                  </p><p></p>
+	            <p>We give a polynomial-time algorithm for learning latent-state linear dynamical systems without system identification, and without assumptions on the spectral radius of the system's transition matrix. The algorithm extends the recently introduced technique of spectral filtering, previously applied only to systems with a symmetric transition matrix, using a novel convex relaxation to allow for the efficient identification of phases.</p>
           </td>
-          <td width="75%" valign="top">
-            <p><a href="#" name="max-ent">
-            <papertitle><img src="images/new.png" height="15">Provably Efficient Maximum Entropy Exploration</papertitle></a><br>
-            with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a>, <a href="http://www.abbyvansoest.com/">Abby Van Soest</a> <br>
-            <em>Preprint</em>, 2018<br> 
-            <a href="https://arxiv.org/pdf/1812.02690.pdf">pdf</a> | <a href="docs/max-ent/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1812.02690">arXiv</a>
-            </p><p></p>
-      <p>Suppose an agent is in an unknown MDP in the absence of a reward signal, what might we hope that an agent can efficiently learn to do? One natural objective problem is to learn a policy which induces a distribution over state space that is as uniform as possible (in an entropic sense). Despite this mathematical program being non-convex, we provide a provably efficient method, both in terms of sample size and computational complexity, to construct such a maximum-entropy exploratory policy.</p>
-          </td>
-        </tr>
-    <tr bgcolor="#ffffd0">
-      <td width="25%" valign="middle">
-        <img width=220 src="images/lds-new.png">
-      </td>
-      <td width="75%" valign="top">
-        <p><a href="#" name="lds-news">
-        <papertitle>Spectral Filtering for General Linear Dynamical Systems</papertitle></a><br>
-        with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://holdenlee.github.io/">Holden Lee</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a>, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a>  <br>
-        <em>Neural Information Processing Systems (NIPS)</em>, 2018 <strong>Oral Presentation</strong><br> 
-        <a href="https://papers.nips.cc/paper/7714-spectral-filtering-for-general-linear-dynamical-systems.pdf">pdf</a> | <a href="docs/lds-new/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1802.03981">arXiv</a>
-        </p><p></p>
-	<p>We give a polynomial-time algorithm for learning latent-state linear dynamical systems without system identification, and without assumptions on the spectral radius of the system's transition matrix. The algorithm extends the recently introduced technique of spectral filtering, previously applied only to systems with a symmetric transition matrix, using a novel convex relaxation to allow for the efficient identification of phases.</p>
-      </td>
-    </tr>
-    <td width="25%" valign="middle">
-        <img width=220 height=170 src="images/ggt.PNG">
-      </td>
-      <td width="75%" valign="top">
-        <p><a href="#" name="ggt">
-        <papertitle>The Case for Full-Matrix Adaptive Regularization</papertitle></a><br>
-        with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a>, <a href="https://www.cs.princeton.edu/~bbullins/">Brian Bullins</a>, Xinyi Chen, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a>, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a> <br>
-        Prelim at <em>ICML 2018 Workshop on Modern Trends in Non-Convex Optimization</em><br> 
-        <a href="https://arxiv.org/pdf/1806.02958.pdf">pdf</a>
-        |
-        <a href="docs/ggt/cite.bib">bibtex</a>
-        |
-        <a href="https://arxiv.org/abs/1806.02958">arXiv</a>
-        </p><p></p>
-        <p>Adaptive regularization methods come in diagonal and full-matrix variants. However, only the former have enjoyed widespread adoption in training large-scale deep models. In this paper, we show how to make full-matrix adaptive regularization practical and useful. At the heart of our algorithm is an efficient method for computing the inverse square root of a low-rank matrix. We show that GGT converges to first-order local minima, providing the first rigorous theoretical analysis of adaptive regularization in non-convex optimization.</p>
-      </td>
-    </tr>
+      </tr>
     <td width="25%" valign="middle">
         <img width=220 src="images/cartpole.jpg">
-      </td>
-      <td width="75%" valign="top">
+    </td>
+    <td width="75%" valign="top">
         <p><a href="#" name="lds-rl">
-        <papertitle>Towards Provable Control for Unknown Linear Dynamical Systems</papertitle></a><br>
-        with Sanjeev Arora, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, Holden Lee, Cyril Zhang, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a> <br>
-        Prelim at <em>ICLR 2018 Workshop</em><br> 
-        <a href="https://openreview.net/pdf?id=BygpQlbA-">pdf</a>
-        |
-        <a href="docs/lqr-rl/cite.bib">bibtex</a>
+            <papertitle>Towards Provable Control for Unknown Linear Dynamical Systems</papertitle></a><br>
+            with Sanjeev Arora, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, Holden Lee, Cyril Zhang, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a> <br>
+            Prelim at <em>ICLR 2018 Workshop</em><br> 
+            <a href="https://openreview.net/pdf?id=BygpQlbA-">pdf</a>
+            |
+            <a href="docs/lqr-rl/cite.bib">bibtex</a>
         </p><p></p>
         <p>We study the control of symmetric linear dynamical systems with unknown dynamics and a hidden state. Using a recent spectral filtering technique, we formulate optimal control in this setting as a convex program. This approach eliminates the need to solve the nonconvex problem of explicit identification of the system and its latent state, and allows for provable optimality guarantees for the control signal.</p>
-      </td>
+    </td>
     </tr>
     <tr>
-      <td width="25%" valign="middle">
-        <img width=220 src="images/lds.png">
-      </td>
-      <td width="75%" valign="top">
-        <p><a href="#" name="lds-lr">
-        <papertitle>Learning Linear Dynamical Systems
-via Spectral Filtering</papertitle></a><br>
-        with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a> <br>
-        <em>Neural Information Processing Systems (NIPS)</em>, 2017 <strong>Spotlight</strong><br> 
-        <a href="https://papers.nips.cc/paper/7247-learning-linear-dynamical-systems-via-spectral-filtering.pdf">pdf</a>
-        |
-        <a href="docs/lds-old/cite.bib">bibtex</a>
-        |
-        <a href="https://arxiv.org/abs/1711.00946">arXiv</a>
-        </p><p></p>
-        <p>We present an efficient and practical algorithm for the online prediction of discrete-time linear dynamical systems. Despite the non-convex optimization problem, our algorithm comes with provable guarantees: it has near-optimal regret bounds compared to the best LDS in hindsight, while overparameterizing the model by a small logarithmic factor. Our analysis brings together ideas from improper learning through convex relaxations, online regret minimization, and the spectral theory of Hankel matrices.</p>
-      </td>
+        <td width="25%" valign="middle">
+            <img width=220 src="images/lds.png">
+        </td>
+        <td width="75%" valign="top">
+            <p><a href="#" name="lds-lr">
+                <papertitle>Learning Linear Dynamical Systems
+                    via Spectral Filtering</papertitle></a><br>
+                with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="http://cs.princeton.edu/">Cyril Zhang</a> <br>
+                <em>Neural Information Processing Systems (NIPS)</em>, 2017 <strong>Spotlight</strong><br> 
+                <a href="https://papers.nips.cc/paper/7247-learning-linear-dynamical-systems-via-spectral-filtering.pdf">pdf</a>
+                |
+                <a href="docs/lds-old/cite.bib">bibtex</a>
+                |
+                <a href="https://arxiv.org/abs/1711.00946">arXiv</a>
+            </p><p></p>
+            <p>We present an efficient and practical algorithm for the online prediction of discrete-time linear dynamical systems. Despite the non-convex optimization problem, our algorithm comes with provable guarantees: it has near-optimal regret bounds compared to the best LDS in hindsight, while overparameterizing the model by a small logarithmic factor. Our analysis brings together ideas from improper learning through convex relaxations, online regret minimization, and the spectral theory of Hankel matrices.</p>
+        </td>
     </tr>
     <tr>
-      <td width="25%" valign="middle">
-        <img width=220 height=120 src="images/dp-price.png">
-      </td>
-      <td width="75%" valign="top">
-        <p><a href="http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf" name="dp-price">
-        <papertitle>The Price of Differential Privacy for Online Learning</papertitle></a><br>
-		with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a><br/>
+        <td width="25%" valign="middle">
+            <img width=220 height=120 src="images/dp-price.png">
+        </td>
+        <td width="75%" valign="top">
+            <p><a href="http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf" name="dp-price">
+                <papertitle>The Price of Differential Privacy for Online Learning</papertitle></a><br>
+		            with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a><br/>
         <em>International Conference on Machine Learning (ICML)</em>, 2017 <br> 
         <a href="http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf">pdf</a>
         |
