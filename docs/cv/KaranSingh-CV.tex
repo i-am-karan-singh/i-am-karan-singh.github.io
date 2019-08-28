@@ -1,14 +1,15 @@
+
 \documentclass{scrartcl}
 
 \reversemarginpar % Move the margin to the left of the page 
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
-
+\date{}
 \usepackage{bold-extra}
 \usepackage{marvosym}
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
-
+\usepackage[left=1.5in,right=0.5in,top=0.3in,bottom=0.3in]{geometry}
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
 
 \usepackage{hyperref, xcolor, color, soul} % Required for adding links	and customizing them
@@ -19,7 +20,7 @@
 \newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Description}[1]{\hangindent=0.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
 
 \newcommand{\IndentLine}{\hangindent=2em\hangafter=0\noindent\raggedright}
 
@@ -30,76 +31,95 @@
 \thispagestyle{empty} % Stop the page count at the bottom of the first page
 
 \begin{cv}{\spacedallcaps{Karan Singh}}\vspace{1.5em} % Your name
-\date{}
 
 \hspace{-3.0em}\noindent\spacedlowsmallcaps{Personal Information}
-\vspace{0.5em}\\ % Personal information heading
+{\small
+\\ % Personal information heading
 {\IndentLine Princeton University \hfill \Letter\href{mailto:karans@princeton.edu}{karans@princeton.edu}\\ \IndentLine 35 Olden Street \hfill \Mundus\href{http://cs.princeton.edu/~karans}{cs.princeton.edu/\textasciitilde karans} \\
-\IndentLine Princeton, NJ 08540 \hfill \Mobilefone +1 (609) 516 5555\\}
+\IndentLine Princeton, NJ 08540 \hfill \Mobilefone +1 (609) 516 5555\\}}
 
-\vspace{0.5em} % Extra white space between the personal information section and goal
+\vspace{0.5em} 
 
-\noindent\spacedlowsmallcaps{Research Interests}\vspace{0.5em} % Goal heading, could be used for a quotation or short profile instead
+\noindent\spacedlowsmallcaps{Research Interests}
 
-\Description{Theoretical and applied Machine Learning, with a focus on Interactive Systems. Reinforcement Learning, Generative Models, Online Learning.\\
-Privacy and Fairness in Machine Learning.}
+\Description{Theoretical and applied Machine Learning, with a focus on \textbf {Reinforcement Learning} and \textbf{Dynamical Systems}. Generative Models, Online Learning, Learning with Partial Feedback, Optimization. }
 %\vspace{1em} % Goal text
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Education}\vspace{0.5em}
+\spacedlowsmallcaps{Education}
 
-\NewEntry{2015-Present}{Princeton University}
+\NewEntry{2015-Present}{\textsc{\color{Maroon} Princeton University} \hfill {\footnotesize Advisor: Prof.~Elad \textsc{Hazan}}}
 
-\Description{\MarginText{PhD Candidate in Computer Science}GPA: 4.0\ \ $\cdotp$\ \ \textit{PhD Candidate}\ \ $\cdotp$\ \ Computer Science\newline 
-My research is focused on algorithms for machine learning with provable guarantees on computational and statistical efficiency, with an attentive emphasis on {\bf Interactive Learning Algorithms}. Recent efforts have yielded provable methods for learning {\bf Linear Dynamical Systems}, and algorithms for {\bf Reinforcement Learning} with improved generalization performance.\newline
-Advisor: Prof.~Elad \textsc{Hazan}}
+\vspace{-0.25em}
+\Description{\MarginText{Reinforcement Learning, Dynamical Systems} GPA: 4.0\ \ $\cdotp$\ \ \textit{PhD Candidate}\ \ $\cdotp$\ \ Computer Science\newline 
+My research is focused on algorithms for machine learning with {\em provable guarantees} on computational and statistical efficiency, with an attentive emphasis on feedback-driven \textbf{interactive learning algorithms}. My prior research efforts have yielded provable methods for learning \textbf{Linear Dynamical Systems} (\textbf{Spotlight} at NeurIPS 2017, \textbf{Oral} at NeurIPS 2018) and designing controls for the same, despite the non-convex nature of the maximum likelihood problem. My recent works seek to address issues concerning task-agnostic \textbf{exploration} in Reinforcement Learning and those that arise when dealing with \textbf{continuous state} and action spaces.\\ \hfill \\
+Awarded the \textbf{SEAS Award for Excellence} in 2018, the \textbf{Spotlight Prize} at the New York Academy of Sciences' 12$^{th}$ Annual Machine Learning Symposium, and the \textbf{ICML 2017 Travel Award}.
+}
 
 %------------------------------------------------
+\vspace{-0.5em}
+\NewEntry{2011-2015}{\textsc{\color{Maroon} Indian Institute of Technology, Kanpur}}
 
-\NewEntry{2011-2015}{Indian Institute of Technology, Kanpur}
-
-\Description{\MarginText{Bachelor of Technology, Computer Science \\ \hfill \\ Ranked 1\textsuperscript{st} (among 820 students)}GPA: 10.0\ \ $\cdotp$\ \ \textit{Bachelor of Technology}\ \ $\cdotp$\ \ Computer Science\newline
-Following a rigorous introduction to computer systems and engineering, my coursework included 12 graduate-level courses on theoretical computer science, machine learning, and mathematics. My senior thesis details sketch-based algorithms for machine learning, and lower bounds in the streaming model. \\
-\hfill\\
-Awarded the {\bf President's Gold Medal} for the best academic performance in the graduating class among all disciplines.
+\vspace{-0.25em}
+\Description{\MarginText{Academically \textbf{Ranked 1\textsuperscript{st}} (among 820 students)}GPA: 10.0\ \ $\cdotp$\ \ \textit{Bachelor of Technology}\ \ $\cdotp$\ \ Computer Science\newline
+My coursework included 12 graduate-level courses on theoretical computer science, machine learning, and mathematics. My senior thesis details sketch-based algorithms for machine learning, and lower bounds in the streaming model.\\ \hfill \\
+Awarded the \textbf{President's Gold Medal} for the best academic performance in the graduating class among all disciplines, \textbf{Academic Excellence Award} for 3 years, and the grade  for \textbf{exceptional performance} in 14 courses. 
 }
 
 %------------------------------------------------
 
-\vspace{0.5em} % Extra space between major sections
+%\vspace{1em} % Extra space between major sections
+
+\noindent\spacedlowsmallcaps{Work Experience}
+
+\NewEntry{Summer 2018}{Intern, \textsc{\color{Maroon} Google AI, Princeton} \hfill {\footnotesize Host: Prof. Yoram \textsc{Singer}}}
+
+\vspace{-0.5em}
+\Description{\MarginText{Google AI, Princeton}Efficient optimizers for deep learning leveraging full-matrix adaptive regularization, achieving state-of-the-art performance on language-based tasks. Released open-source code.}
+\vspace{-1em}
+\NewEntry{Summer 2014}{Intern, \textsc{\color{Maroon} Microsoft Research, Redmond} \hfill {\footnotesize Host: Dr. Sumit \textsc{Gulwani}}}
+
+\vspace{-0.5em}
+\Description{\MarginText{Microsoft Research}Translating natural language prompts into domain-specific programs using Program Synsthesis.}
+
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Publications ($\alpha\beta$ order)} \vspace{1em}\\
-\Description{\MarginText{NIPS 2017 Spotlight}Elad Hazan, {\bf Karan Singh} and Cyril Zhang. Online Learning of Linear Dynamical Systems. In the \textit{Advances in Neural Information Processing Systems 30 (NIPS), 2017}.}
-\vspace{-0.25em}
-\Description{\MarginText{ICML 2017}Naman Agarwal and {\bf Karan Singh}. The Price of Differential Privacy for Online Learning. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}. \href{http://proceedings.mlr.press/v70/agarwal17a.pdf}{PDF}}
-\vspace{-0.25em}
-\Description{\MarginText{ICML 2017}Elad Hazan, {\bf Karan Singh} and Cyril Zhang. Efficient Regret Minimization in Non-Convex Games. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}. \href{http://proceedings.mlr.press/v70/hazan17a/hazan17a.pdf}{PDF}}
-\vspace{-0.25em}
-\Description{\MarginText{DEML Workshop, ICML 2016}Irineo Cabreros, {\bf Karan Singh} and Angela Zhou. A Mixture Model for Crowdsourcing. A preliminary version appeared at the \textit{ICML Workshop on Data Efficient Machine Learning, 2016}.
+\noindent\spacedlowsmallcaps{Publications} 
+
+\Description{\MarginText{ICML 2019}Naman Agarwal, Brian Bullins, Elad Hazan, Sham Kakade, \textbf{Karan Singh}. Online Control with Adversarial Disturbances. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.7em}
+\Description{\MarginText{ICML 2019}Elad Hazan, Sham Kakade, \textbf{Karan Singh}, Abby Van Soest. Provably Efficient Maximum Entropy Exploration. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.7em}
+\Description{\MarginText{ICML 2019}Naman Agarwal, Brian Bullins, Xinyi Chen, Elad Hazan, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Efficient Full-Matrix Adaptive Regularization. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.7em}
+\Description{\MarginText{NeurIPS 2018 \textbf{Oral Present.}}Elad Hazan, Holden Lee, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Spectral Filtering for General Linear Dynamical Systems. In the \textit{Advances in Neural Information Processing Systems 31 (NIPS), 2018}.}
+\vspace{-0.7em}
+\Description{\MarginText{ICLR 2018 Workshop}Sanjeev Arora, Elad Hazan, Holden Lee, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Towards Provable Control for Unknown Linear Dynamical Systems. \textit{International Conference on Learning Representations, Workshop Track, 2018}.}
+\vspace{-0.7em}
+\Description{\MarginText{NeurIPS 2017 \textbf{Spotlight}}Elad Hazan, \textbf{Karan Singh} and Cyril Zhang. Learning Linear Dynamical Systems via Spectral Filtering. In the \textit{Advances in Neural Information Processing Systems 30 (NIPS), 2017}.}
+\vspace{-0.7em}
+\Description{\MarginText{ICML 2017}Naman Agarwal and \textbf{Karan Singh}. The Price of Differential Privacy for Online Learning. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}.}
+\vspace{-0.7em}
+\Description{\MarginText{ICML 2017}Elad Hazan, \textbf{Karan Singh} and Cyril Zhang. Efficient Regret Minimization in Non-Convex Games. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}.}
+%\vspace{-0.25em}
+
+\noindent\spacedlowsmallcaps{Teaching \& Editorial Experience}
+\vspace{-1em}
+
+\Description{\MarginText{\hfill \\ Princeton University \\ \hfill \\ IIT Kanpur}
+\begin{itemize}
+\item[\Forward] Reviewer for NeurIPS 2018/19, ICML 2018/19, COLT 2017/18/19, ALT 2019.
+\item[\Forward] Teaching Assistant for Introduction to Machine Learning (COS 324), Artificial Intelligence and Machine Learning (COS 402), and Economics and Computation
+(COS 445).
+\item[\Forward] Teaching Assistant for the Data Structures and Algorithms course as one of the selected undergraduates.
+\end{itemize}
 }
-
-%------------------------------------------------
-
-\vspace{0.5em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\noindent\spacedlowsmallcaps{Experience}\vspace{0.5em}
-
-\NewEntry{Summer 2014}{Research Intern, \textsc{Microsoft Research, Redmond}}
-
-\Description{\MarginText{Microsoft Research Redmond}Developed a Programming-by-Natural-Language framework to synthesize programs in targeted domain-specific languages given intents expressed as natural language prompts. The system supported multiple rounds of end-user interactions making it more robust than traditional NLP approaches. Concrete instantiations of the framework offer an interactive experience for repetitive data manipulation and summarization tasks.\\
-Host: Dr. Sumit \textsc{Gulwani}}
-%\vspace{0.5em} % Extra space between major sections
 
 \end{cv}
 
