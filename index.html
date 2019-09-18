@@ -69,11 +69,11 @@
       <tr><td>
         <heading>News</heading>
         <ul>
+            <li> <i>[September 2019]</i> Paper on <a href="https://arxiv.org/abs/1909.05062">logarithmic regret for control</a> accepted at <a href="https://neurips.cc/">NeurIPS 2019</a> (<strong>Oral Presentation</strong>).</li>
             <li> <i>[May 2019]</i> <a href="#h-inf">Three</a> <a href="#max-ent">papers</a> <a href="#ggt">accepted</a> at <a href="https://icml.cc/">ICML 2019</a>. </li>
             <li>
-                <i>[December2018]</i> Our research on <a href="https://arxiv.org/abs/1806.02958">full-matrix adaptive preconditioning</a> was featured on the <a href="https://ai.googleblog.com/2018/12/google-ai-princeton-current-and-future.html">Google AI Blog</a>.
+                <i>[December 2018]</i> Our research on <a href="https://arxiv.org/abs/1806.02958">full-matrix adaptive preconditioning</a> was featured on the <a href="https://ai.googleblog.com/2018/12/google-ai-princeton-current-and-future.html">Google AI Blog</a>.
             </li>
-	        <li> <i>[September 2018]</i> Paper on <a href="#lds-asym">learning asymmetric LDS</a> accepted at <a href="https://nips.cc/Conferences/2018">NIPS 2018</a> (<strong>Oral Presentation</strong>).</li>
         </ul>
       </td></tr>
 
@@ -89,11 +89,25 @@
       <tbody>
           <tr bgcolor="#ffffd0">
               <td width="25%" valign="middle">
+                  <img width=200 src="images/log-c.png">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="https://arxiv.org/abs/1909.05062" name="log-c"><papertitle><img src="images/new.png" height="15">Logarithmic Regret for Online Control</papertitle></a><br/>
+                    with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a>, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a><br>
+                    <em>Neural Information Processing Systems (NeurIPS)</em>, 2019 <strong>Oral Presentation</strong><br> 
+                    <a href="https://arxiv.org/abs/1909.05062">pdf</a> | <a href="docs/log-c/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1909.05062">arXiv</a>
+                    <p></p>
+                  <p>We study optimal regret bounds for control in linear dynamical systems under adversarially changing strongly convex cost functions, given the knowledge of transition dynamics. This includes several well studied and fundamental frameworks such as the Kalman filter and the linear quadratic regulator. State of the art methods achieve regret which scales as 
+                    $\sqrt{T}$, where $T$ is the time horizon. We show that the optimal regret in this setting can be significantly smaller, scaling as $polylog(T)$. </p>
+              </td>
+          </tr>
+          <tr>
+              <td width="25%" valign="middle">
                   <img width=200 src="images/h-inf.gif">
               </td>
               <td width="75%" valign="top">
                   <p><a href="http://proceedings.mlr.press/v97/agarwal19c/agarwal19c.pdf" name="h-inf">
-                      <papertitle><img src="images/new.png" height="15">Online Control with Adversarial Disturbances</papertitle></a><br>
+                      <papertitle>Online Control with Adversarial Disturbances</papertitle></a><br>
                       with <a href="http://cs.princeton.edu/~namana/">Naman Agarwal</a>, <a href="https://www.cs.princeton.edu/~bbullins/">Brian Bullins</a>, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a><br>
                       <em>International Conference on Machine Learning (ICML)</em>, 2019 <br> 
                       <a href="http://proceedings.mlr.press/v97/agarwal19c/agarwal19c.pdf">pdf</a> | <a href="docs/h-inf/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1902.08721">arXiv</a>
@@ -101,13 +115,13 @@
                   <p>We study the control of linear dynamical systems with adversarial disturbances, as opposed to statistical noise. We present an efficient algorithm that achieves nearly-tight regret bounds in this setting. Our result generalizes upon previous work in two main aspects: the algorithm can accommodate adversarial noise in the dynamics, and can handle general convex costs.</p>
               </td>
           </tr>
-          <tr bgcolor="#ffffd0">
+          <tr>
               <td width="25%" valign="middle">
                   <img width=220 src="images/max-ent.gif">
               </td>
               <td width="75%" valign="top">
                   <p><a href="http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf" name="max-ent">
-                      <papertitle><img src="images/new.png" height="15">Provably Efficient Maximum Entropy Exploration</papertitle></a><br>
+                      <papertitle>Provably Efficient Maximum Entropy Exploration</papertitle></a><br>
                       with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a>, <a href="http://www.abbyvansoest.com/">Abby Van Soest</a> <br>
                       <em>International Conference on Machine Learning (ICML)</em>, 2019 <br> 
                       <a href="http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf">pdf</a> | <a href="docs/max-ent/cite.bib">bibtex</a> | <a href="https://arxiv.org/abs/1812.02690">arXiv</a>
@@ -115,7 +129,7 @@
                   <p>Suppose an agent is in a (possibly unknown) Markov Decision Process in the absence of a reward signal, what might we hope that an agent can efficiently learn to do? This work studies a broad class of objectives that are defined solely as functions of the state-visitation frequencies that are induced by how the agent behaves. For example, one natural, intrinsically defined, objective problem is for the agent to learn a policy which induces a distribution over state space that is as uniform as possible. We provide an efficient algorithm to optimize such such intrinsically defined objectives, when given access to a black box planning oracle.</p>
               </td>
           </tr>
-          <tr bgcolor="#ffffd0">
+          <tr>
               <td width="25%" valign="middle">
                   <img width=220 height=170 src="images/ggt.PNG">
               </td>
