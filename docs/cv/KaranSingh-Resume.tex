@@ -1,0 +1,145 @@
+
+\documentclass{scrartcl}
+
+%\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+\date{}
+\usepackage{bold-extra}
+\usepackage{marvosym}
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage[left=0.7in,right=0.7in,top=0.3in,bottom=0.5in]{geometry}
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref, xcolor, color, soul} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=0.5em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\IndentLine}{\hangindent=2em\hangafter=0\noindent\raggedright}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+\begin{cv}{\spacedallcaps{Karan Singh}}\vspace{1.5em} % Your name
+
+\hspace{-3.0em}\noindent\spacedlowsmallcaps{Personal Information}
+{\small
+\\ % Personal information heading
+{\IndentLine Princeton University \hfill \Letter\href{mailto:karans@princeton.edu}{karans@princeton.edu}\\ \IndentLine 35 Olden Street \hfill \Mundus\href{http://cs.princeton.edu/~karans}{cs.princeton.edu/\textasciitilde karans} \\
+\IndentLine Princeton, NJ 08540 \hfill \Mobilefone +1 (609) 516 5555\\}}
+
+\vspace{0.5em} 
+
+\noindent\spacedlowsmallcaps{Research Interests}
+
+\Description{Theoretical and applied Machine Learning, with a focus on \textbf {Reinforcement Learning} and \textbf{Control} of Dynamical Systems. Online Learning, Learning with Partial Feedback, Optimization, Private Learning. }
+%\vspace{1em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}
+
+\NewEntry{2015-Present}{\textsc{\color{Maroon} Princeton University}}
+
+\vspace{-0.4em}\hspace{1.0em}
+\Description{ \textit{PhD Candidate} in Computer Science, advised by Prof.~Elad \textsc{Hazan}. \hfill GPA: 4.0/4
+}
+
+%------------------------------------------------
+\vspace{-0.5em}
+\NewEntry{2011-2015}{\textsc{\color{Maroon} Indian Institute of Technology, Kanpur}}
+
+\vspace{-0.4em}\hspace{1.0em}
+\Description{\textit{Bachelor of Technology} in Computer Science. \hfill GPA: 10.0/10
+}
+
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Publications} 
+
+\Description{Naman Agarwal, Elad Hazan, \textbf{Karan Singh}. Logarithmic Regret for Online Control. In the \textit{Advances in Neural Information Processing Systems 31 (NeurIPS), 2019}, \textbf{Oral Presentation}.}
+\vspace{-0.2em}
+\Description{Naman Agarwal, Brian Bullins, Elad Hazan, Sham Kakade, \textbf{Karan Singh}. Online Control with Adversarial Disturbances. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.2em}
+\Description{Elad Hazan, Sham Kakade, \textbf{Karan Singh}, Abby Van Soest. Provably Efficient Maximum Entropy Exploration. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.2em}
+\Description{Naman Agarwal, Brian Bullins, Xinyi Chen, Elad Hazan, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Efficient Full-Matrix Adaptive Regularization. In the \textit{Proceedings of the 36th International Conference on Machine Learning (ICML), 2019}.}
+\vspace{-0.2em}
+\Description{Elad Hazan, Holden Lee, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Spectral Filtering for General Linear Dynamical Systems. In the \textit{Advances in Neural Information Processing Systems 31 (NeurIPS), 2018}, \textbf{Oral Presentation}.}
+\vspace{-0.2em}
+\Description{Sanjeev Arora, Elad Hazan, Holden Lee, \textbf{Karan Singh}, Cyril Zhang and Yi Zhang. Towards Provable Control for Unknown Linear Dynamical Systems. \textit{International Conference on Learning Representations (ICLR), Workshop Track, 2018}.}
+\vspace{-0.2em}
+\Description{Elad Hazan, \textbf{Karan Singh} and Cyril Zhang. Learning Linear Dynamical Systems via Spectral Filtering. In the \textit{Advances in Neural Information Processing Systems 30 (NIPS), 2017}, \textbf{Spotlight}.}
+\vspace{-0.2em}
+\Description{Naman Agarwal and \textbf{Karan Singh}. The Price of Differential Privacy for Online Learning. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}.}
+\vspace{-0.2em}
+\Description{Elad Hazan, \textbf{Karan Singh} and Cyril Zhang. Efficient Regret Minimization in Non-Convex Games. In the \textit{Proceedings of the 34th International Conference on Machine Learning (ICML), 2017}.}
+%\vspace{-0.25em}
+
+\noindent\spacedlowsmallcaps{Awards \& Honors}
+
+\Description{
+\begin{itemize}
+\item[\Forward] The \textbf{Jacobus Fellowship} by the Princeton University in 2019 for {\em the highest scholarly excellence} at the graduate level. 
+\vspace{-0.2em}
+\item[\Forward] \textbf{SEAS Award for Excellence} in 2018 by the Graduate School at Princeton.
+\vspace{-0.2em}
+\item[\Forward] The \textbf{Spotlight Prize} at the New York Academy of Sciences' 12$^{th}$ Annual ML Symposium.
+\vspace{-0.2em}
+\item[\Forward] Selected \textbf{twice} for an \textbf{Oral Presentation} at NeurIPS -- top 0.5\% of the submissions.
+\vspace{-0.2em}
+\item[\Forward] The \textbf{President's Gold Medal} for the best academic performance among all disciplines at IIT Kanpur.
+\vspace{-0.2em}
+\item[\Forward]\textbf{Academic Excellence Award} for 3 years at IIT Kanpur.
+\vspace{-0.2em}
+\item[\Forward] ICML 2017 \textbf{Travel Award}; titled as a \textbf{Top Reviewer} at NeurIPS 2019.
+\end{itemize}
+\vspace{-0.2em}
+}
+
+\noindent\spacedlowsmallcaps{Work Experience}
+
+\NewEntry{Summer 2018}{Intern, \textsc{\color{Maroon} Google AI, Princeton} \hfill {\footnotesize Host: Prof. Yoram \textsc{Singer}}}
+
+\vspace{-0.4em}\hspace{1em}
+\Description{Efficient optimizers for deep learning leveraging full-matrix adaptive regularization.}
+\vspace{-0.5em}
+\NewEntry{Summer 2014}{Intern, \textsc{\color{Maroon} Microsoft Research, Redmond} \hfill {\footnotesize Host: Dr. Sumit \textsc{Gulwani}}}
+
+\vspace{-0.4em}\hspace{1em}
+\Description{Translating natural language prompts into domain-specific programs using Program Synthesis.}
+
+
+
+\noindent\spacedlowsmallcaps{Teaching \& Editorial Experience}
+
+\Description{
+\begin{itemize}
+\item[\Forward] Reviewer for NeurIPS 2018/19, ICML 2018/19, COLT 2017/18/19, ALT 2019.
+\item[\Forward] Teaching assistant for Introduction to Machine Learning (COS 324), Artificial Intelligence and Machine Learning (COS 402), and Economics and Computation
+(COS 445) at Princeton; and Data Structures at IIT Kanpur.
+\end{itemize}
+}
+
+\end{cv}
+
+\end{document}
