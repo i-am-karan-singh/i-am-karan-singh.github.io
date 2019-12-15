@@ -47,14 +47,14 @@
           </script>
         </p>
         <p>
-          I'm a PhD candidate in <a href="http://cs.princeton.edu">Computer Science</a> at <a href="http://www.princeton.edu">Princeton University</a>. I'm very fortunate to be advised by <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>. My research is focused on provably efficient algorithms for <strong>reinforcement learning</strong>, aided by the lens of <strong>dynamical systems</strong> and the algorithmic toolkit of <strong>optimization</strong> and (non-stochastic) <strong>online learning</strong>. My recent efforts seek to address the challenges that accompany sparse rewards, partial observability and large (or continuous) state spaces. At this time, I'm a long-term research intern at <a href="https://ai.google/research/">Google AI</a>.
+          I'm a final year PhD candidate in <a href="http://cs.princeton.edu">Computer Science</a> at <a href="http://www.princeton.edu">Princeton University</a>. I'm very fortunate to be advised by <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>. My research is focused on provably efficient algorithms for <strong>reinforcement learning</strong>, aided by the lens of <strong>dynamical systems</strong> and the algorithmic toolkit of <strong>optimization</strong> and (non-stochastic) <strong>online learning</strong>. My recent efforts seek to address the challenges that accompany sparse rewards, partial observability and large (or continuous) state spaces. At this time, I'm a long-term research intern at <a href="https://ai.google/research/">Google AI</a>.
         </p>
         <p>
           I did my bachelors at <a href="http://iitk.ac.in">IIT Kanpur</a>, where I worked on sketch-based algorithms for machine learning, and space lower bounds in the streaming model. I've also spent time at <a href="http://research.microsoft.com/en-us/">Microsoft Research</a> in Redmond working on program synthesis.
         </p>
         <p align="center">
           <a onclick="unscram();">Email</a> &nbsp;|&nbsp;
-          <a href="https://i-am-karan-singh.github.io/docs/cv/KaranSingh-CV.pdf">CV</a> &nbsp;|&nbsp;
+          <a href="https://i-am-karan-singh.github.io/docs/cv/KaranSingh-Resume.pdf">CV</a> &nbsp;|&nbsp;
           <a href="https://scholar.google.com/citations?user=PZJIgZUAAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp; 
           <a href="https://github.com/i-am-karan-singh/">Github</a>
         </p>
@@ -69,11 +69,9 @@
       <tr><td>
         <heading>News</heading>
         <ul>
+	  <li> <i>[December 2019]</i> <strong>Best Paper Award</strong> at the <a href="https://optrl2019.github.io/awards.html">Optimization Foundations for RL</a> workshop at NeurIPS2019.
             <li> <i>[September 2019]</i> Paper on <a href="https://arxiv.org/abs/1909.05062">logarithmic regret for control</a> accepted at <a href="https://neurips.cc/">NeurIPS 2019</a> (<strong>Oral Presentation</strong>).</li>
             <li> <i>[May 2019]</i> <a href="#h-inf">Three</a> <a href="#max-ent">papers</a> <a href="#ggt">accepted</a> at <a href="https://icml.cc/">ICML 2019</a>. </li>
-            <li>
-                <i>[December 2018]</i> Our research on <a href="https://arxiv.org/abs/1806.02958">full-matrix adaptive preconditioning</a> was featured on the <a href="https://ai.googleblog.com/2018/12/google-ai-princeton-current-and-future.html">Google AI Blog</a>.
-            </li>
         </ul>
       </td></tr>
 
@@ -99,6 +97,19 @@
                     <p></p>
                   <p>We study optimal regret bounds for control in linear dynamical systems under adversarially changing strongly convex cost functions, given the knowledge of transition dynamics. This includes several well studied and fundamental frameworks such as the Kalman filter and the linear quadratic regulator. State of the art methods achieve regret which scales as 
                     $\sqrt{T}$, where $T$ is the time horizon. We show that the optimal regret in this setting can be significantly smaller, scaling as $polylog(T)$. </p>
+              </td>
+          </tr>
+          <tr bgcolor="#ffffd0">
+              <td width="25%" valign="middle">
+                  <img width=200 src="images/nsc.png">
+              </td>
+              <td width="75%" valign="top">
+                  <p><a href="https://arxiv.org/abs/1911.12178" name="nsc"><papertitle><img src="images/new.png" height="15">The Nonstochastic Control Problem</papertitle></a><br/>
+                    with <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, <a href="https://homes.cs.washington.edu/~sham/">Sham Kakade</a><br>
+                    <em>Algorithmic Learning Theory (ALT)</em>, 2020<br> 
+                    <a href="https://arxiv.org/abs/1911.12178">pdf</a> | <a href="https://arxiv.org/abs/1909.05062">arXiv</a>
+                    <p></p>
+                  <p>We consider the problem of controlling an unknown linear dynamical system with nonstochastic adversarial perturbations and adversarial convex loss functions. The possibility of achieving sub-linear regret was previously posed as an open question. We give an efficient algorithm that achieves $T^{\frac{2}{3}}$ in this setting. Crucial to our result is a simple system identification procedure that is effective under adversarial noise. </p>
               </td>
           </tr>
           <tr>
@@ -168,7 +179,7 @@
         <p><a href="#" name="lds-rl">
             <papertitle>Towards Provable Control for Unknown Linear Dynamical Systems</papertitle></a><br>
             with Sanjeev Arora, <a href="http://cs.princeton.edu/~ehazan">Elad Hazan</a>, Holden Lee, Cyril Zhang, <a href="http://www.cs.princeton.edu/~yz7/">Yi Zhang</a> <br>
-            Prelim at <em>ICLR 2018 Workshop</em><br> 
+            <em>International Conference on Learning Representatios (ICLR)</em>, 2018 Workshop Track<br> 
             <a href="https://openreview.net/pdf?id=BygpQlbA-">pdf</a>
             |
             <a href="docs/lqr-rl/cite.bib">bibtex</a>
