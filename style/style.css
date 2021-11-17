@@ -10,17 +10,13 @@ body,td,th,tr,p,a {
 font-family: Cambria; /*'Lato', Verdana, Helvetica, sans-serif;*/
 font-size: 15px
 }
-strong {
-font-family: Verdana;
-font-size: 13px;
-}
 heading {
 font-family: Cambria;
 font-size: 26px;
 }
 papertitle {
 font-family: Cambria;
-font-size: 18px;
+font-size: 15px;
 }
 name {
 font-family: Cambria;
