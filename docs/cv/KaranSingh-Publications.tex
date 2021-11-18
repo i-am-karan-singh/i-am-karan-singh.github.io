@@ -1,0 +1,102 @@
+\documentclass{scrartcl}
+\usepackage{bold-extra}
+\usepackage{marvosym}
+\usepackage{tabularx}
+\usepackage[nochapters]{classicthesis} 
+\usepackage[LabelsAligned]{currvita} 
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+\usepackage{hyperref, xcolor, color, soul} 
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} 
+\newlength{\datebox}\settowidth{\datebox}{November 2021}
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=1em\hangafter=0 #2 \hfill \textit{#1}  #3 
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{\hangindent=0em\hangafter=0\noindent\raggedright {#1}\par\normalsize\vspace{1em}}
+
+\newcommand{\IndentLine}{\hangindent=1em\hangafter=0\noindent\raggedright}
+
+\newcommand{\spacedlowallcaps}[1]{{\Large\textls[80]{\scshape \MakeTextLowercase{#1}}}}
+
+\begin{document}
+
+\thispagestyle{empty}   
+
+\begin{cv}{\spacedallcaps{List of Publications}}\vspace{1.0em} 
+\noindent{\href{http://i-am-karan-singh.github.io/}{Karan Singh}, November 2021}
+% Your name
+\vspace{0.5em}\\
+\noindent All publications list authors in the alphabetical order, except those indicated with $\dagger$.
+
+\vspace{1.5em}
+
+\noindent\spacedlowallcaps{Peer-reviewed Publications} 
+
+\vspace{0.5em}
+
+\Description{\href{https://proceedings.mlr.press/v139/hazan21a/hazan21a.pdf}{Boosting for Online Convex Optimization}
+\\ Elad Hazan, Karan Singh\\ \textit{International Conference on Machine Learning (ICML), 2021}
+}
+
+\Description{\href{https://proceedings.mlr.press/v139/agarwal21b/agarwal21b.pdf}{A Regret Minimization Approach to Iterative Learning Control
+}\\ Naman Agarwal, Elad Hazan, Anirudha Majumdar, Karan Singh\\ \textit{International Conference on Machine Learning (ICML), 2021}}
+
+\Description{\href{https://proceedings.mlr.press/v125/simchowitz20a/simchowitz20a.pdf}{Improper Learning for Nonstochastic Control$\dagger$
+}\\ Max Simchowitz, Karan Singh, Elad Hazan\\ \textit{Conference on Learning Theory (COLT), 2020}}
+
+\Description{\href{https://proceedings.mlr.press/v125/ghai20a/ghai20a.pdf}{No-Regret Prediction in Marginally Stable Systems
+}\\ Udaya Ghai, Holden Lee, Karan Singh, Cyril Zhang, Yi Zhang\\ \textit{Conference on Learning Theory (COLT), 2020}}
+
+\Description{\href{https://proceedings.mlr.press/v117/hazan20a/hazan20a.pdf}{The Nonstochastic Control Problem}\\Elad Hazan, Sham Kakade, Karan Singh \\ \textit{Algorithmic Learning Theory (ALT), 2020}}
+
+\Description{\href{https://papers.nips.cc/paper/2019/file/78719f11fa2df9917de3110133506521-Paper.pdf}{Logarithmic Regret for Online Control}\\ Naman Agarwal, Elad Hazan, Karan Singh\\ \textit{Neural Information Processing Systems (NeurIPS), 2019}, \textbf{Oral Presentation} ($<$0.5\% of submissions) \\ (Also, \textbf{Best Paper Award} at the OptRL workshop at NeurIPS 2019)}
+
+
+\Description{\href{http://proceedings.mlr.press/v97/agarwal19c/agarwal19c.pdf}{Online Control with Adversarial Disturbances} \\Naman Agarwal, Brian Bullins, Elad Hazan, Sham Kakade, Karan Singh\\ \textit{International Conference on Machine Learning (ICML), 2019}}
+
+
+\Description{\href{http://proceedings.mlr.press/v97/hazan19a/hazan19a.pdf}{Provably Efficient Maximum Entropy Exploration}\\ Elad Hazan, Sham Kakade, Karan Singh, Abby Van Soest \\ \textit{International Conference on Machine Learning (ICML), 2019}}
+
+\Description{\href{http://proceedings.mlr.press/v97/agarwal19b/agarwal19b.pdf}{Efficient Full-Matrix Adaptive Regularization} \\ Naman Agarwal, Brian Bullins, Xinyi Chen, Elad Hazan, Karan Singh, Cyril Zhang, Yi Zhang \\ \textit{International Conference on Machine Learning (ICML), 2019}}
+
+\Description{\href{https://papers.nips.cc/paper/7714-spectral-filtering-for-general-linear-dynamical-systems.pdf}{Spectral Filtering for General Linear Dynamical Systems} \\Elad Hazan, Holden Lee, Karan Singh, Cyril Zhang, Yi Zhang\\ \textit{Neural Information Processing Systems (NeurIPS), 2018}, \textbf{Oral Presentation} ($<$0.5\% of submissions)}
+
+\Description{\href{https://papers.nips.cc/paper/7247-learning-linear-dynamical-systems-via-spectral-filtering.pdf}{Learning Linear Dynamical Systems via Spectral Filtering}\\ Elad Hazan, Karan Singh, Cyril Zhang\\ \textit{Neural Information Processing Systems (NeurIPS), 2017}, \textbf{Spotlight} ($<$5\% of submissions)\\ (Also, \textbf{Spotlight Prize} at New York Academy of Sciences' ML Symposium 2018)}
+
+\Description{\href{http://proceedings.mlr.press/v70/agarwal17a/agarwal17a.pdf}{The Price of Differential Privacy for Online Learning}  \\ Naman Agarwal, Karan Singh \\ \textit{International Conference on Machine Learning (ICML), 2017}}
+
+
+\Description{\href{http://proceedings.mlr.press/v70/hazan17a/hazan17a.pdf}{Efficient Regret Minimization in Non-Convex Games}\\ Elad Hazan, Karan Singh, Cyril Zhang  \\ \textit{International Conference on Machine Learning (ICML), 2017}}
+
+\vspace{1em}
+
+\noindent\spacedlowallcaps{Preprints, Patents and Technical Reports} 
+
+\vspace{0.5em}
+
+\Description{\href{https://arxiv.org/pdf/2108.09767.pdf}{A Boosting Approach to Reinforcement Learning} \\ Nataly Brukhim, Elad Hazan, Karan Singh \\ Preliminary version at ICML Workshop on RL Theory, 2021
+}
+
+\Description{\href{https://patentimages.storage.googleapis.com/b5/ee/96/2d4272b197b898/US11138513.pdf}{Dynamic Learning System
+} \\ Elad Hazan, Karan Singh, Cyril Zhang \\ US Patent 11,138,513 B2, approved Oct 2021
+}
+
+\Description{\href{https://arxiv.org/pdf/2102.06779.pdf}{Machine Learning for Mechanical Ventilation Control$\dagger$} \\ Daniel Suo, Cyril Zhang, Paula Gradu, Udaya Ghai, Xinyi Chen, Edgar Minasyan, Naman Agarwal, Karan Singh, Julienne LaChance, Tom Zajdel, Manuel Schottdorf, Daniel Cohen, Elad Hazan\\
+Machine Learning for Health (ML4H), 2021 Workshop Track\\
+\href{https://engineering.princeton.edu/news/2021/01/26/engineering-and-artificial-intelligence-combine-safeguard-patients-lives}{Featured} in Princeton Engineering news
+}
+
+\Description{\href{https://montrealrobotics.ca/diffcvgp/assets/papers/1.pdf}{Deluca -- A Differentiable Control Library: Environments, Methods, and Benchmarking$\dagger$} \\ Paula Gradu, John Hallman, Daniel Suo, Alex Yu, Naman Agarwal, Udaya Ghai, Karan Singh, Cyril Zhang, Anirudha Majumdar, Elad Hazan
+\\
+NeurIPS Workshop on Differentiable Computer Vision \& Physics, 2020 Oral Presentation
+}
+
+\Description{\href{https://openreview.net/pdf?id=HJGuXK1vM}{Towards Provable Control for Unknown Linear Dynamical Systems}\\
+Sanjeev Arora, Elad Hazan, Holden Lee, Karan Singh, Cyril Zhang, Yi Zhang\\ International Conference on Learning Representations (ICLR), Workshop Track, 2018}
+
+\Description{\href{https://arxiv.org/pdf/1701.08795.pdf}{Dynamic Task Allocation for Crowdsourcing$\dagger$} \\ Angela Zhou, Irineo Cabreros, Karan Singh \\ ICML Workshop on Data Efficient Machine Learning, 2016}
+
+\end{cv}
+
+\end{document}
