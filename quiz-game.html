@@ -1,0 +1,270 @@
+<!-- COPIED from http://orangehelicopter.com/academic/bandits.html -->
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Multi-armed bandit game</title>
+	<script>
+		wins = [0,0,0];
+		visits = [0,0,0];
+		win_probs = [0.55, 0.45, 0.75];
+
+		function shuffle(array) {
+			let currentIndex = array.length,  randomIndex;
+
+			// While there remain elements to shuffle.
+			while (currentIndex != 0) {
+
+				// Pick a remaining element.
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex--;
+
+				// And swap it with the current element.
+				[array[currentIndex], array[randomIndex]] = [
+				array[randomIndex], array[currentIndex]];
+			}
+
+  			return array;
+		}
+
+		win_probs = shuffle(win_probs);
+
+		exploration = 1.4;
+		ucbScores = [0,0,0];
+		maxUcbScore = 0;
+		autoTimer = null;
+		
+		function init()
+		{
+			if (location.search.indexOf("ucb") !== -1)
+			{
+				// Enable UCB stats
+				document.getElementById("ucbRow").style.visibility = "visible";
+			}
+			
+			update();
+		}
+		
+		function pull(arm)
+		{
+			totalTrials = 0;
+			totalReward = 0;
+			for (armit=0; armit<3; armit++)
+			{
+				totalTrials += visits[armit];
+				totalReward += wins[armit];
+			}
+			if (totalTrials < 50){
+				reward = (Math.random() < win_probs[arm]) ? 2 : 0;
+				wins[arm] += reward;
+				visits[arm] += 1;
+				update();
+				
+				// So that double-clicking doesn't select random bits of text
+				clearSelection();
+			} else if (totalTrials == 50){
+				if (totalReward >= 65)
+					document.getElementById("final").innerHTML = "You win!";
+				else
+					document.getElementById("final").innerHTML = "You lose!";
+			}
+		}
+		
+		function toggleUcbAuto()
+		{
+			if (autoTimer == null)
+			{
+				// Start the UCB auto timer
+				autoTimer = window.setInterval(ucbAuto, 100);
+			}
+			else
+			{
+				// Stop the UCB auto timer
+				window.clearInterval(autoTimer);
+				autoTimer = null;
+			}
+		}
+		
+		function ucbAuto()
+		{
+			// Pull the arm with the maximal UCB score
+			for (arm=0; arm<3; arm++)
+			{
+				if (ucbScores[arm] == maxUcbScore)
+				{
+					pull(arm);
+					return;
+				}
+			}
+		}
+		
+		function update()
+		{
+			totalTrials = 0;
+			totalReward = 0;
+			
+			// Update the arm stats, as well as totalTrials and totalReward
+			for (arm=0; arm<3; arm++)
+			{
+				totalTrials += visits[arm];
+				totalReward += wins[arm];
+				
+				document.getElementById("visits" + arm).innerHTML = visits[arm];
+				document.getElementById("wins" + arm).innerHTML = wins[arm] / 2;
+				
+				if (visits[arm] > 0)
+				{
+					document.getElementById("average" + arm).innerHTML = (wins[arm] / visits[arm]).toFixed(3);
+				}
+				else
+				{
+					document.getElementById("average" + arm).innerHTML = "?";
+				}
+			}
+			
+			// Update the UCB scores
+			for (arm=0; arm<3; arm++)
+			{
+				if (visits[arm] > 0)
+				{
+					ucbScores[arm] = wins[arm] / visits[arm] + exploration * Math.sqrt( Math.log(totalTrials) / visits[arm] );
+					document.getElementById("ucb" + arm).innerHTML = ucbScores[arm].toFixed(3);
+				}
+				else
+				{
+					ucbScores[arm] = 1.0e20;
+					document.getElementById("ucb" + arm).innerHTML = "&infin;";
+				}
+				
+				if (arm == 0 || ucbScores[arm] > maxUcbScore)
+					maxUcbScore = ucbScores[arm];
+			}
+			
+			// Highlight the arms with maximal UCB score
+			for (arm=0; arm<3; arm++)
+			{
+				if (ucbScores[arm] == maxUcbScore)
+					document.getElementById("ucb" + arm).style.backgroundColor = "yellow";
+				else
+					document.getElementById("ucb" + arm).style.backgroundColor = "white";
+			}
+			
+			// Update the total
+			document.getElementById("total").innerHTML = totalReward + " - " + totalTrials + " = " + (totalReward - totalTrials);
+			if (totalTrials > 0)
+				document.getElementById("total").innerHTML += "<br />(average " + (totalReward / totalTrials).toFixed(3) + " per play)";
+		}
+		
+		// http://stackoverflow.com/questions/880512/prevent-text-selection-after-double-click
+		function clearSelection()
+		{
+			if (document.selection && document.selection.empty)
+			{
+				document.selection.empty();
+			}
+			else if (window.getSelection)
+			{
+				var sel = window.getSelection();
+				sel.removeAllRanges();
+			}
+		}
+	</script>
+	<style type="text/css">
+		div {
+			font-family: tahoma;
+			font-size: 16pt;
+		}
+		
+		.explanation {
+			margin: 50px;
+			font-size: 14pt;
+		}
+		
+		.arm {
+			text-align: center;
+			font-size: 48pt;
+			cursor: pointer;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+		
+		.button {
+			text-align: center;
+			cursor: pointer;
+			padding: 5px;
+			border: 1px solid black;
+		}
+		
+		.rowhead {
+			text-align: right;
+		}
+		
+		.stat {
+			text-align: center;
+		}
+		
+		.armA {
+			color: red;
+		}
+		
+		.armB {
+			color: green;
+		}
+		
+		.armC {
+			color: blue;
+		}
+		
+		#ucbRow {
+			visibility: hidden;
+		}
+
+		.final {
+			color: red;
+			font-size: 42;
+		}
+	</style>
+</head>
+<body onload="init()">
+	<h2>Score at least 15 in 50 trials to win.</h2>
+	<table>
+		<tbody><tr>
+			<td>&nbsp;</td>
+			<td><div class="arm armA" onclick="pull(&#39;0&#39;)">A</div></td>
+			<td><div class="arm armB" onclick="pull(&#39;1&#39;)">B</div></td>
+			<td><div class="arm armC" onclick="pull(&#39;2&#39;)">C</div></td>
+		</tr>
+		<tr>
+			<td><div class="rowhead">Number of trials:</div></td>
+			<td><div class="stat armA" id="visits0">0</div></td>
+			<td><div class="stat armB" id="visits1">0</div></td>
+			<td><div class="stat armC" id="visits2">0</div></td>
+		</tr>
+		<tr>
+			<td><div class="rowhead">Wins:</div></td>
+			<td><div class="stat armA" id="wins0">0</div></td>
+			<td><div class="stat armB" id="wins1">0</div></td>
+			<td><div class="stat armC" id="wins2">0</div></td>
+		</tr>
+		<tr>
+			<td><div class="rowhead">Average reward:</div></td>
+			<td><div class="stat armA" id="average0">?</div></td>
+			<td><div class="stat armB" id="average1">?</div></td>
+			<td><div class="stat armC" id="average2">?</div></td>
+		</tr>
+		<tr id="ucbRow">
+			<td><div class="rowhead">UCB1 score:</div></td>
+			<td><div class="stat armA" id="ucb0" style="background-color: yellow;">∞</div></td>
+			<td><div class="stat armB" id="ucb1" style="background-color: yellow;">∞</div></td>
+			<td><div class="stat armC" id="ucb2" style="background-color: yellow;">∞</div></td>
+			<td><div class="button" onclick="toggleUcbAuto()">Auto</div></td>
+		</tr>
+		<tr>
+			<td><div class="rowhead">TOTAL:</div></td>
+			<td colspan="3"><div class="stat" id="total">0 - 0 = 0</div></td>
+		</tr>
+		<tr>
+			<td><div class="stat final" id="final"></div></td>
+		</tr>
+	</tbody></table>
+	Adapted from <a href="http://orangehelicopter.com/academic/bandits.html">here</a>.
+</body></html>
