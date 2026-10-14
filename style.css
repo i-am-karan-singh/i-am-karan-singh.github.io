@@ -48,13 +48,13 @@ h4, h5, h6 { font-size: 1rem; }
 p { margin: 0.75rem 0 1rem; }
 
 a {
-		color: var(--link);
-    text-decoration: none;
-    font-weight: 600;
-    background-color: var(--link-background);
-    border-radius: 4px;
-    padding: 0 2px;
-    transition: background-color 0.2s ease;
+	color: var(--link);
+	text-decoration: none;
+	font-weight: 600;
+	background-color: var(--link-background);
+	border-radius: 4px;
+	padding: 0 2px;
+	transition: background-color 0.2s ease;
 }
 a:hover { background-color: var(--link-hover); }
 a:focus-visible {
